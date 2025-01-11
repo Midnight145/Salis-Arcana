@@ -1,0 +1,12 @@
+{
+    "v1.0.0": {
+        "dev": "1dd83f7cbb591cc0c13654c04893d728",
+        "sources": "550e6d9c9f4114791bb4fbb4c5efe09b",
+        "release": "a907a2d478d58d82a7360ab9684dd343"
+    },
+    "v1.0.1": {
+        "dev": "779ed3fa39242de3f1fffa2017957faf",
+        "sources": "a90e6ad0bdca4faaa9898505607822ea",
+        "release": "f733f48fec8ba627b36833c95779b552"
+    }
+}
