@@ -65,6 +65,9 @@ public class CustomResearch {
                 }
                 try {
                     ResearchEntry research = ResearchHelper.importResearchFromJson(file);
+                    if (research == null || !research.isEnabled()) {
+                        continue;
+                    }
                     researches.add(research);
                 } catch (IOException e) {
                     LOG.error("Could not read research file {}.", file.getName());
