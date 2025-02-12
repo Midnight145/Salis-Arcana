@@ -209,6 +209,12 @@ Add rotated recipes for the fire, shock, frost, equal trade, excavation, and pri
 ## Config option: `rotatedThaumometer`
 Add a rotated crafting recipe for the Thaumometer.
 
+## Config option: `rottenFleshRecipe`
+Add a recipe to convert flesh blocks back into rotten flesh.
+
+## Config option: `crystalClusterUncrafting`
+Add crafting recipes to convert crystal cluster blocks back into primal shards. Does not work for mixed crystal clusters.
+
 # Enhancements - Wand Component Replacement
 
 ## Config option: `enableReplaceWandCapsRecipe`

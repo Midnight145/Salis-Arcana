@@ -55,10 +55,24 @@ public class CustomRecipes {
             ThaumcraftApi.getCraftingRecipes()
                 .add(new ReplaceWandCapsRecipe());
         }
+
         if (enhancements.replaceWandCoreSettings.isEnabled()) {
             // noinspection unchecked
             ThaumcraftApi.getCraftingRecipes()
                 .add(new ReplaceWandCoreRecipe());
+        }
+
+        if (enhancements.rottenFleshRecipe.isEnabled()) {
+            GameRegistry
+                .addShapelessRecipe(new ItemStack(Items.rotten_flesh, 9), new ItemStack(ConfigBlocks.blockTaint, 1, 2));
+        }
+
+        if (enhancements.crystalClusterUncrafting.isEnabled()) {
+            for (var metadata = 0; metadata <= 5; ++metadata) {
+                GameRegistry.addShapelessRecipe(
+                    new ItemStack(ConfigItems.itemShard, 6, metadata),
+                    new ItemStack(ConfigBlocks.blockCrystal, 1, metadata));
+            }
         }
     }
 

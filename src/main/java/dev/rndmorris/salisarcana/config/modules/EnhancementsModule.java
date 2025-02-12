@@ -58,6 +58,8 @@ public class EnhancementsModule extends BaseConfigModule {
     public final StringSetting thaumometerScanContainersResearch;
     public final ToggleSetting levitatorShiftFix;
     public final ToggleSetting pureNodeBiomeChange;
+    public final ToggleSetting rottenFleshRecipe;
+    public final ToggleSetting crystalClusterUncrafting;
 
     public EnhancementsModule() {
         // spotless:off
@@ -231,7 +233,17 @@ public class EnhancementsModule extends BaseConfigModule {
                 this,
                 ConfigPhase.EARLY,
                 "eldritchAltarSpawningMethod",
-                "Override how eldritch altars pick where to try spawning crimson knights and eldritch guardians.")
+                "Override how eldritch altars pick where to try spawning crimson knights and eldritch guardians."),
+            rottenFleshRecipe = new ToggleSetting(
+                this,
+                ConfigPhase.LATE,
+                "rottenFleshRecipe",
+                "Add a crafting recipe to convert flesh blocks back into rotten flesh.").setCategory("recipes"),
+            crystalClusterUncrafting = new ToggleSetting(
+                this,
+                ConfigPhase.LATE,
+                "crystalClusterUncrafting",
+                "Add crafting recipes to convert crystal cluster blocks back into primal shards. Does not work for mixed crystal clusters.").setCategory("recipes")
         );
 
         // spotless:on
