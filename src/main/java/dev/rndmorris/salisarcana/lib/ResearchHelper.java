@@ -227,10 +227,11 @@ public class ResearchHelper {
             return true;
         }
         LOG.info("Registering custom research: {}", research.getKey());
-        ResearchItem newResearch = new ResearchItem(research.getKey(), research.getCategory());
+        ResearchItem newResearch = new ResearchItem("salisarcana:" + research.getKey(), research.getCategory());
         research.updateResearchItem(newResearch);
         ResearchCategoryList categoryList = ResearchCategories.getResearchList(research.getCategory());
         categoryList.research.put(research.getKey(), newResearch);
+
         newResearch.registerResearchItem();
         return true;
     }

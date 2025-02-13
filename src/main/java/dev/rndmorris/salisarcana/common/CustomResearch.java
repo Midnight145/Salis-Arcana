@@ -43,6 +43,7 @@ public class CustomResearch {
 
     public static ResearchItem replaceCapsResearch;
     public static ResearchItem replaceCoreResearch;
+    public static ResearchItem scanContainersResearch;
 
     public static void registerResearchFromFiles() {
         if (FMLCommonHandler.instance()
@@ -113,6 +114,11 @@ public class CustomResearch {
             ConfigModuleRoot.enhancements.replaceWandCoreSettings,
             PlaceholderItem.rodPlaceholder,
             exampleRodRecipes());
+
+        scanContainersResearch = maybeRegister(
+            ConfigModuleRoot.enhancements.thaumometerScanContainersResearch,
+            ConfigItems.itemThaumometer,
+            new IArcaneRecipe[] {});
     }
 
     private static IArcaneRecipe[][] exampleCapRecipes() {

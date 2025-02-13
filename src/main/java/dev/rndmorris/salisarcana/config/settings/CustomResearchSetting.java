@@ -127,7 +127,7 @@ public class CustomResearchSetting extends Setting {
         private boolean autoUnlock = false;
 
         public ResearchInfo(String researchName, String researchCategory, int researchCol, int researchRow) {
-            this.researchName = researchName;
+            this.researchName = "salisarcana:" + researchName;
             this.researchCategory = researchCategory;
             this.researchCol = researchCol;
             this.researchRow = researchRow;
