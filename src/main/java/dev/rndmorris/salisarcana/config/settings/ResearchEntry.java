@@ -33,6 +33,9 @@ import thaumcraft.common.config.ConfigResearch;
 
 public class ResearchEntry {
 
+    private boolean enabled;
+    @SerializedName("action")
+    private String type;
     private String key = "";
     private String category = "";
     private String name = "";
@@ -135,6 +138,10 @@ public class ResearchEntry {
             this.pages[j] = new ResearchPageEntry(research.getPages()[j], j);
         }
 
+    }
+
+    public boolean isEnabled() {
+        return enabled;
     }
 
     public String getKey() {
