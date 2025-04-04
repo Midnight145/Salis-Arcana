@@ -377,6 +377,12 @@ public enum Mixins {
         .setApplyIf(ConfigModuleRoot.enhancements.heatSourceOreDict::isEnabled)
         .addMixinClasses("tiles.MixinTileCrucible_HeatSources", "tiles.MixinTileThaumatorium_HeatSources")
         .addTargetedMod(TargetedMod.THAUMCRAFT)),
+
+    MOB_VIS_WHITELIST(new Builder().setPhase(Phase.LATE)
+        .setSide(Side.BOTH)
+        .setApplyIf(ConfigModuleRoot.enhancements.mobVisWhitelist::isEnabled)
+        .addMixinClasses("lib.events.MixinEventHandlerEntity")
+        .addTargetedMod(TargetedMod.THAUMCRAFT)),
     ;
     // spotless:on
 
