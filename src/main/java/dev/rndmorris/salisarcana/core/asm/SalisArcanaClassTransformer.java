@@ -31,7 +31,8 @@ public class SalisArcanaClassTransformer implements IClassTransformer {
                     .addConflict("MixinItemShard", SalisConfig.bugfixes.itemShardColor)
                     .addConflict("MixinWandManager", SalisConfig.features.useAllBaublesSlots)
                     .addConflict("MixinEventHandlerRunic", SalisConfig.features.useAllBaublesSlots)
-                    .addConflict("MixinWarpEvents_BaubleSlots", SalisConfig.features.useAllBaublesSlots));
+                    .addConflict("MixinWarpEvents", SalisConfig.features.useAllBaublesSlots)
+                    .addConflict("MixinEventHandlerEntity", SalisConfig.features.fakePlayersDropLootbags));
     }
 
     @SuppressWarnings("ForLoopReplaceableByForEach")
